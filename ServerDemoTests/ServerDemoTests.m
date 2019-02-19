@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "CountManager.h"
 
 @interface ServerDemoTests : XCTestCase
 
@@ -26,6 +27,10 @@
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
 //    XCTAssertNotNil(nil);
+    
+    int result = [CountManager add:10  b:20];
+    XCTAssertEqual(result, 31);
+    
 }
 
 - (void)testPerformanceExample {
